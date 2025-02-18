@@ -45,3 +45,30 @@ body {
 .copy-btn:hover {
 	background: #0056b3;
 }
+.checkbox-container {
+	position: relative;
+	display: inline-block;
+	margin: 5px 0;
+}
+
+.tooltip {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 100%;
+	width: 200px;
+	background: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	white-space: normal;
+	z-index: 100;
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+
+.checkbox-container:hover .tooltip {
+	opacity: 1;
+}

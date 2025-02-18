@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Checkbox from './Checkbox'
 
-const Category = ({ title, options, selectedOptions, onToggle }) => {
+const Category = ({ title, options, selectedOptions, onToggle, descriptions }) => {
 	const [isOpen, setIsOpen] = useState(true)
 
 	return (
@@ -17,6 +17,7 @@ const Category = ({ title, options, selectedOptions, onToggle }) => {
 							label={option}
 							checked={selectedOptions.includes(option)}
 							onChange={() => onToggle(option)}
+							description={descriptions[option]}
 						/>
 					))}
 				</div>

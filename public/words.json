@@ -1,0 +1,8 @@
+{
+	"Matte": "A non-reflective surface that diffuses light evenly.",
+	"Metallic": "A shiny and reflective surface that mimics metal properties.",
+	"Bark-like": "A rough, textured surface resembling tree bark.",
+	"Isometric": "A 3D-like perspective where all axes (X, Y, and Z) are equally foreshortened at 120-degree angles, commonly used in strategy games and pixel art.",
+	"Dimetric": "A perspective similar to isometric but with two axes foreshortened unequally.",
+	"Bird's Eye": "A top-down perspective looking directly down onto a scene."
+}

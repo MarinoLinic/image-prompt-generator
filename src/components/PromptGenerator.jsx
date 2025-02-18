@@ -10,8 +10,17 @@ const categories = {
 const PromptGenerator = () => {
 	const [objectName, setObjectName] = useState('')
 	const [selectedOptions, setSelectedOptions] = useState({})
+	const [descriptions, setDescriptions] = useState({})
 
-	// Load from local storage on mount
+	// Load words.json
+	useEffect(() => {
+		fetch('/words.json')
+			.then((res) => res.json())
+			.then((data) => setDescriptions(data))
+			.catch((err) => console.error('Failed to load words.json:', err))
+	}, [])
+
+	// Load from local storage
 	useEffect(() => {
 		const savedObject = localStorage.getItem('objectName')
 		const savedOptions = localStorage.getItem('selectedOptions')
@@ -20,7 +29,7 @@ const PromptGenerator = () => {
 		if (savedOptions) setSelectedOptions(JSON.parse(savedOptions))
 	}, [])
 
-	// Save to local storage when state changes
+	// Save to local storage
 	useEffect(() => {
 		localStorage.setItem('objectName', objectName)
 		localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions))
@@ -65,6 +74,7 @@ const PromptGenerator = () => {
 					options={options}
 					selectedOptions={selectedOptions[category] || []}
 					onToggle={(option) => handleToggle(category, option)}
+					descriptions={descriptions}
 				/>
 			))}
 			<textarea className="output-box" readOnly value={generatePrompt()} />
