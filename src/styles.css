@@ -1,0 +1,47 @@
+body {
+	font-family: Arial, sans-serif;
+	background: #f4f4f4;
+	padding: 20px;
+}
+.container {
+	max-width: 500px;
+	margin: auto;
+	padding: 20px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.input-box,
+.output-box {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.category {
+	margin-bottom: 10px;
+}
+.category-title {
+	cursor: pointer;
+	background: #ddd;
+	padding: 5px;
+	border-radius: 5px;
+}
+.checkbox-group {
+	padding-left: 10px;
+}
+.checkbox input {
+	margin-right: 5px;
+}
+.copy-btn {
+	width: 100%;
+	padding: 10px;
+	background: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+.copy-btn:hover {
+	background: #0056b3;
+}
