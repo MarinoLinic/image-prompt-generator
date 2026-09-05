@@ -61,10 +61,21 @@ const PromptGenerator = () => {
 			const fmt = (s) => {
 				const low = s.toLowerCase()
 				if (low.includes('view')) return `from a ${low}`
-				if (s === 'Symmetrical') return 'with a symmetrical composition'
 				return `in a ${low} perspective`
 			}
 			return `viewed ${joinList(o.map(fmt))}`
+		}],
+		['Composition', (o) => {
+			const phrases = {
+				'Symmetrical': 'with a symmetrical composition',
+				'Silhouette': 'presented as a silhouette',
+				'Leading Lines': 'framed with strong leading lines',
+				'Negative Space': 'with generous negative space around it',
+				'Panoramic': 'in a sweeping panoramic frame',
+				'Minimalist Composition': 'in a minimalist composition',
+				'Maximalist Composition': 'in a dense, maximalist composition',
+			}
+			return joinList(o.map((s) => phrases[s] || `with ${s.toLowerCase()}`))
 		}],
 		['Lighting', (o) => `lit by ${joinList(o.map((s) => s.toLowerCase()))}`],
 		['Mood & Atmosphere', (o) => `with a ${joinList(o.map((s) => s.toLowerCase()))} atmosphere`],
@@ -73,6 +84,12 @@ const PromptGenerator = () => {
 			return `in ${joinList(o.map(fmt))} colors`
 		}],
 		['Texture & Detail Effects', (o) => `accented with ${joinList(o.map((s) => s.toLowerCase()))}`],
+		['Background & Environment', (o) => {
+			const blanks = ['White', 'Black', 'Gradient', 'Transparent']
+			const blank = o.filter((s) => blanks.includes(s)).map((s) => s.toLowerCase() + ' background')
+			const scenes = o.filter((s) => !blanks.includes(s)).map((s) => `${s.toLowerCase()} backdrop`)
+			return `on a ${joinList([...blank, ...scenes])}`
+		}],
 	]
 
 	// Generate prompt text

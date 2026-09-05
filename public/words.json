@@ -17,7 +17,12 @@
 		"Charcoal Drawing": { "description": "Smudgy, high-contrast monochrome drawing with deep blacks and soft gradients.", "image": "" },
 		"Acrylic Painting": { "description": "Bold, fast-drying paint with vibrant flat or layered color.", "image": "" },
 		"Ukiyo-e": { "description": "Japanese woodblock print style with flat color areas and flowing contour lines.", "image": "" },
-		"Stained Glass": { "description": "Colored sections separated by dark lead lines, like a cathedral window.", "image": "" }
+		"Stained Glass": { "description": "Colored sections separated by dark lead lines, like a cathedral window.", "image": "" },
+		"Impressionism": { "description": "Loose visible brushwork capturing light and atmosphere over fine detail, like Monet.", "image": "" },
+		"Art Nouveau": { "description": "Flowing organic lines, floral ornament, and elegant figures in the style of Mucha.", "image": "" },
+		"Blueprint": { "description": "White technical linework on blue paper, like an engineering schematic.", "image": "" },
+		"Claymation": { "description": "Stop-motion clay look with fingerprints, handmade bumps, and soft shapes.", "image": "" },
+		"Graffiti": { "description": "Bold spray-paint street art with drips, tags, and layered colors.", "image": "" }
 	},
 	"Surface & Material": {
 		"Matte": { "description": "A non-reflective surface that diffuses light evenly.", "image": "" },
@@ -44,8 +49,16 @@
 		"Macro": { "description": "Extreme close-up revealing tiny details invisible to the naked eye.", "image": "" },
 		"Fisheye": { "description": "Ultra-wide lens look with strong curved distortion at the edges.", "image": "" },
 		"Dutch Angle": { "description": "Tilted horizon line creating tension and dynamism.", "image": "" },
-		"Over-the-Shoulder": { "description": "Framed from behind a subject's shoulder, common in film and games.", "image": "" },
-		"Symmetrical": { "description": "Perfectly mirrored composition around a central axis.", "image": "" }
+		"Over-the-Shoulder": { "description": "Framed from behind a subject's shoulder, common in film and games.", "image": "" }
+	},
+	"Composition": {
+		"Symmetrical": { "description": "Perfectly mirrored composition around a central axis.", "image": "" },
+		"Silhouette": { "description": "Subject rendered as a solid dark shape against a brighter background.", "image": "" },
+		"Leading Lines": { "description": "Composition guides the eye along converging lines toward the subject.", "image": "" },
+		"Negative Space": { "description": "Large areas of emptiness deliberately framing a small subject.", "image": "" },
+		"Panoramic": { "description": "Very wide framing capturing a sweeping horizontal expanse.", "image": "" },
+		"Minimalist Composition": { "description": "Extremely sparse framing with few elements and lots of space.", "image": "" },
+		"Maximalist Composition": { "description": "Densely packed frame overflowing with detail and objects.", "image": "" }
 	},
 	"Lighting": {
 		"Golden Hour": { "description": "Warm, soft sunlight shortly after sunrise or before sunset.", "image": "" },
@@ -57,7 +70,9 @@
 		"Bioluminescent": { "description": "Organic glowing light emitted by the subject itself.", "image": "" },
 		"Studio Lighting": { "description": "Controlled, professional three-point lighting with clean shadows.", "image": "" },
 		"Candlelit": { "description": "Warm, flickering light with deep surrounding shadows.", "image": "" },
-		"Moonlit": { "description": "Cool, pale blue-white night lighting.", "image": "" }
+		"Moonlit": { "description": "Cool, pale blue-white night lighting.", "image": "" },
+		"Blue Hour": { "description": "Deep blue ambient light just before sunrise or after sunset.", "image": "" },
+		"Dappled Light": { "description": "Patches of light broken up by foliage or objects, creating spotted shadow patterns.", "image": "" }
 	},
 	"Mood & Atmosphere": {
 		"Dreamy": { "description": "Soft, hazy, and ethereal with a gentle idealized feel.", "image": "" },
@@ -69,7 +84,9 @@
 		"Utopian": { "description": "Idealized, perfect world — clean, bright, harmonious.", "image": "" },
 		"Nostalgic": { "description": "Warm memory-evoking feel, often with vintage color grading.", "image": "" },
 		"Surreal": { "description": "Illogical, dreamlike juxtapositions in the style of Dal&iacute; or Magritte.", "image": "" },
-		"Ominous": { "description": "Threatening and foreboding atmosphere.", "image": "" }
+		"Ominous": { "description": "Threatening and foreboding atmosphere.", "image": "" },
+		"Epic": { "description": "Monumental, awe-inspiring scale that dwarfs the viewer.", "image": "" },
+		"Cozy": { "description": "Warm, intimate, and inviting — soft textures and a sense of home.", "image": "" }
 	},
 	"Color Palette": {
 		"Monochrome": { "description": "Single-hue composition, often grayscale.", "image": "" },
@@ -91,7 +108,13 @@
 		"Art Deco": { "description": "1920s glamour with geometric patterns, gold, and symmetry.", "image": "" },
 		"Solarpunk": { "description": "Optimistic green future with lush vegetation and sustainable tech.", "image": "" },
 		"Dieselpunk": { "description": "Gritty interwar-era tech aesthetic with heavy machinery.", "image": "" },
-		"Baroque": { "description": "Ornate 17th-century opulence with dramatic movement and gold detail.", "image": "" }
+		"Baroque": { "description": "Ornate 17th-century opulence with dramatic movement and gold detail.", "image": "" },
+		"Ancient": { "description": "Classical Greco-Roman world of marble temples, ruins, and mythology.", "image": "" },
+		"Prehistoric": { "description": "Primordial world of caves, volcanoes, and colossal ancient life.", "image": "" },
+		"Feudal Japan": { "description": "Edo-era setting with torii gates, castles, and samurai aesthetics.", "image": "" },
+		"Wild West": { "description": "Dusty frontier towns, saloons, and endless desert landscapes.", "image": "" },
+		"Victorian Gothic": { "description": "Dark 19th-century world of gothic spires, fog, and gaslight — no steam, just gloom.", "image": "" },
+		"Underwater": { "description": "Submerged world with coral, caustic light, drifting particles, and distorted sound.", "image": "" }
 	},
 	"Texture & Detail Effects": {
 		"Gritty": { "description": "Rough, dirty, realistic texture with grime and wear.", "image": "" },
@@ -103,5 +126,21 @@
 		"Motion Blur": { "description": "Streaking along the direction of movement to imply speed.", "image": "" },
 		"Lens Flare": { "description": "Bright light scattering rings and streaks across the frame.", "image": "" },
 		"Double Exposure": { "description": "Two images blended into one, like overlapping film photos.", "image": "" }
+	},
+	"Background & Environment": {
+		"Forest": { "description": "Dense woodland backdrop with thick trunks and layered foliage.", "image": "" },
+		"City Skyline": { "description": "Urban backdrop of towers, rooftops, and glowing windows.", "image": "" },
+		"Cosmic": { "description": "Deep space backdrop with stars, nebulae, and distant galaxies.", "image": "" },
+		"Ocean": { "description": "Open sea backdrop with waves stretching to the horizon.", "image": "" },
+		"Mountains": { "description": "Towering peaks and ridges receding into atmospheric haze.", "image": "" },
+		"Desert": { "description": "Endless sand dunes under a vast empty sky.", "image": "" },
+		"Clouds": { "description": "Subject floating among soft billowing clouds.", "image": "" },
+		"Garden": { "description": "Lush flowerbeds, hedges, and winding paths.", "image": "" },
+		"Industrial": { "description": "Factories, pipes, concrete, and heavy machinery.", "image": "" },
+		"Starry Night": { "description": "Dark backdrop scattered with bright stars and galactic band.", "image": "" },
+		"White": { "description": "Plain white studio background — clean product-shot isolation.", "image": "" },
+		"Black": { "description": "Solid black background for dramatic subject isolation.", "image": "" },
+		"Gradient": { "description": "Smooth color-fade background, from soft pastels to deep vignettes.", "image": "" },
+		"Transparent": { "description": "Subject isolated with no background at all, like a cut-out asset (PNG-style).", "image": "" }
 	}
 }
