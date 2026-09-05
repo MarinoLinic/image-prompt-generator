@@ -1,23 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Checkbox from './Checkbox'
 
-const Category = ({ title, options, selectedOptions, onToggle, descriptions }) => {
-	const [isOpen, setIsOpen] = useState(true)
+const Category = ({ title, options, selectedOptions, onToggle, forceOpen }) => {
+	const [isOpen, setIsOpen] = useState(false)
+
+	useEffect(() => {
+		if (forceOpen) setIsOpen(true)
+	}, [forceOpen])
 
 	return (
 		<div className="category">
-			<h3 onClick={() => setIsOpen(!isOpen)} className="category-title">
-				{title} {isOpen ? '▼' : '▶'}
-			</h3>
+			<button className="category-title" onClick={() => setIsOpen(!isOpen)}>
+				<span>{title}</span>
+				<span className="category-meta">
+					{selectedOptions.length > 0 && <span className="badge">{selectedOptions.length}</span>}
+					<span className={`chevron ${isOpen ? 'open' : ''}`}>▸</span>
+				</span>
+			</button>
 			{isOpen && (
 				<div className="checkbox-group">
-					{options.map((option) => (
+					{options.map(([option, info]) => (
 						<Checkbox
 							key={option}
 							label={option}
 							checked={selectedOptions.includes(option)}
 							onChange={() => onToggle(option)}
-							description={descriptions[option]}
+							description={info.description}
+							image={info.image}
 						/>
 					))}
 				</div>

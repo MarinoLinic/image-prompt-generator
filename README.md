@@ -1,8 +1,30 @@
-# React + Vite
+# Simple Image Prompt Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Vite app that lists common aesthetic attributes (art styles, materials,
+perspectives, lighting, moods, color palettes, eras, texture effects) so you can quickly
+compose and copy prompts for AI image generators.
 
-Currently, two official plugins are available:
+## Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+```
+
+Type a subject, toggle attributes across categories, then copy the generated prompt.
+Selections are saved to local storage. Hovering an attribute shows its description —
+preview images will appear there too once added.
+
+## Data
+
+Attributes live in `public/words.json`:
+
+```json
+{
+	"Category Name": {
+		"Attribute": { "description": "...", "image": "/images/attribute.png" }
+	}
+}
+```
+
+Add an image path to the `image` field of any attribute to enable hover previews.
