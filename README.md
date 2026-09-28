@@ -1,4 +1,4 @@
-# Simple Image Prompt Generator
+# Image Prompt Generator
 
 A small React + Vite app that lists common aesthetic attributes (art styles, materials,
 perspectives, lighting, moods, color palettes, eras, texture effects) so you can quickly
