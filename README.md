@@ -4,6 +4,12 @@ A small React + Vite app that lists common aesthetic attributes (art styles, mat
 perspectives, lighting, moods, color palettes, eras, texture effects) so you can quickly
 compose and copy prompts for AI image generators.
 
+![Prompt composer](docs/screenshots/compose.png)
+
+![Art-style attributes](docs/screenshots/attributes.png)
+
+![Workflow diagram](docs/workflow.svg)
+
 ## Usage
 
 ```bash
