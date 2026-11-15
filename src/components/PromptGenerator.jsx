@@ -1,35 +1,44 @@
 import { useState, useEffect, useMemo } from 'react'
 import Category from './Category'
 import CopyButton from './CopyButton'
+import ImagePreview from './ImagePreview'
+import { migrateSelections, normalizeSelections } from '../lib/catalog'
+
+function readStorage(key, fallback, parse = false) {
+	try {
+		const value = localStorage.getItem(key)
+		return value === null ? fallback : parse ? JSON.parse(value) : value
+	} catch { return fallback }
+}
 
 const PromptGenerator = () => {
-	const [objectName, setObjectName] = useState('')
-	const [selectedOptions, setSelectedOptions] = useState({})
-	const [categories, setCategories] = useState({})
+	const [objectName, setObjectName] = useState(() => readStorage('objectName', ''))
+	const [selectedOptions, setSelectedOptions] = useState(() => migrateSelections(readStorage('selectedOptions', {}, true)))
+	const [categories, setCategories] = useState(null)
 	const [search, setSearch] = useState('')
+	const [imageView, setImageView] = useState(() => readStorage('attributeDisplay', 'text') === 'images')
+	const [preview, setPreview] = useState(null)
+	const [loadError, setLoadError] = useState(false)
 
 	// Load words.json
 	useEffect(() => {
-		fetch('/words.json')
-			.then((res) => res.json())
-			.then((data) => setCategories(data))
-			.catch((err) => console.error('Failed to load words.json:', err))
-	}, [])
-
-	// Load from local storage
-	useEffect(() => {
-		const savedObject = localStorage.getItem('objectName')
-		const savedOptions = localStorage.getItem('selectedOptions')
-
-		if (savedObject) setObjectName(savedObject)
-		if (savedOptions) setSelectedOptions(JSON.parse(savedOptions))
+		const abort = new AbortController()
+		fetch('/words.json', { signal: abort.signal })
+			.then((res) => { if (!res.ok) throw new Error('Catalog unavailable'); return res.json() })
+			.then((data) => { setSelectedOptions(previous => normalizeSelections(previous, data)); setCategories(data) })
+			.catch((error) => { if (error.name !== 'AbortError') setLoadError(true) })
+		return () => abort.abort()
 	}, [])
 
 	// Save to local storage
 	useEffect(() => {
-		localStorage.setItem('objectName', objectName)
-		localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions))
-	}, [objectName, selectedOptions])
+		if (!categories) return
+		try {
+			localStorage.setItem('objectName', objectName)
+			localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions))
+			localStorage.setItem('attributeDisplay', imageView ? 'images' : 'text')
+		} catch { /* Keep the current session usable when browser storage is unavailable. */ }
+	}, [objectName, selectedOptions, imageView, categories])
 
 	const handleToggle = (category, option) => {
 		setSelectedOptions((prev) => {
@@ -100,7 +109,7 @@ const PromptGenerator = () => {
 			.filter(Boolean)
 		const matOpts = selectedOptions['Surface & Material'] || []
 		const leadAdj = matOpts.length > 0 ? `${joinList(matOpts.map((s) => s.toLowerCase()))} ` : ''
-		return `${articleFor(subject)} ${leadAdj}${subject}` + (phrases.length > 0 ? `, ${phrases.join(', ')}` : '')
+		return `${articleFor(leadAdj + subject)} ${leadAdj}${subject}` + (phrases.length > 0 ? `, ${phrases.join(', ')}` : '')
 	}
 
 	const selectedCount = useMemo(
@@ -110,10 +119,10 @@ const PromptGenerator = () => {
 
 	// Filter categories by search
 	const filteredCategories = useMemo(() => {
-		if (!search.trim()) return categories
+		if (!search.trim()) return categories || {}
 		const q = search.toLowerCase()
 		const out = {}
-		Object.entries(categories).forEach(([cat, options]) => {
+		Object.entries(categories || {}).forEach(([cat, options]) => {
 			const matches = Object.keys(options).filter((o) => o.toLowerCase().includes(q))
 			if (matches.length > 0) out[cat] = Object.fromEntries(matches.map((m) => [m, options[m]]))
 		})
@@ -144,7 +153,16 @@ const PromptGenerator = () => {
 				/>
 			</div>
 
-			<div className="categories">
+			<div className="attribute-view-toolbar">
+				<span>Attribute view</span>
+				<div role="group" aria-label="Attribute view">
+					<button className={!imageView ? 'active' : ''} aria-pressed={!imageView} onClick={() => setImageView(false)}>Text</button>
+					<button className={imageView ? 'active' : ''} aria-pressed={imageView} onClick={() => setImageView(true)}>Images</button>
+				</div>
+			</div>
+			{loadError && <p role="alert" className="catalog-error">Couldn’t load the attributes. <button onClick={() => window.location.reload()}>Try again</button></p>}
+			{!categories && !loadError && <p role="status">Loading attributes…</p>}
+			<div className={`categories ${imageView ? 'categories-with-images' : ''}`}>
 				{Object.entries(filteredCategories).map(([category, options]) => (
 					<Category
 						key={category}
@@ -153,9 +171,11 @@ const PromptGenerator = () => {
 						selectedOptions={selectedOptions[category] || []}
 						onToggle={(option) => handleToggle(category, option)}
 						forceOpen={search.trim().length > 0}
+						imageView={imageView}
+						onPreview={setPreview}
 					/>
 				))}
-				{Object.keys(filteredCategories).length === 0 && (
+				{categories && Object.keys(filteredCategories).length === 0 && (
 					<p className="no-results">No attributes match &quot;{search}&quot;.</p>
 				)}
 			</div>
@@ -172,6 +192,7 @@ const PromptGenerator = () => {
 				<textarea className="output-box" readOnly value={generatePrompt()} rows={3} />
 				<CopyButton text={generatePrompt()} />
 			</div>
+			{preview && <ImagePreview item={preview} onClose={() => setPreview(null)} selected={!!selectedOptions[preview.category]?.includes(preview.name)} onToggle={() => handleToggle(preview.category, preview.name)} />}
 		</div>
 	)
 }

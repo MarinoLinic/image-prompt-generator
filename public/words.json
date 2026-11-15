@@ -229,6 +229,10 @@
     "Paper Mache": {
       "description": "Rough, layered paper texture with a handmade feel.",
       "image": "/images/surface-material--paper-mache-480.webp"
+    },
+    "Aqua Glass": {
+      "description": "Translucent blue-tinted glass with rounded highlights, refraction, and a wet polished sheen — 2000s aqua UI button look.",
+      "image": "/images/texture-detail-effects--aqua-glass-480.webp"
     }
   },
   "Perspective & Angle": {
@@ -595,10 +599,6 @@
     "CRT": {
       "description": "Faint CRT scanlines and phosphor glow over the whole image, like playing on an old tube TV.",
       "image": "/images/texture-detail-effects--crt-480.webp"
-    },
-    "Aqua Glass": {
-      "description": "Translucent blue-tinted glass with rounded highlights, refraction, and a wet polished sheen — 2000s aqua UI button look.",
-      "image": "/images/texture-detail-effects--aqua-glass-480.webp"
     },
     "Bilinear Blur": {
       "description": "Whole frame softened as if tiny textures were bilinear-filtered — the misty blur of a 320×240 console render.",

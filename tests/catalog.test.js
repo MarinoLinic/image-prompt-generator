@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync, existsSync } from 'node:fs'
-import { filterCatalog, generatePrompt, normalizeSelections, imageSize, CATEGORY_META } from '../src/lib/catalog.js'
+import { filterCatalog, generatePrompt, normalizeSelections, migrateSelections, imageSize, CATEGORY_META } from '../src/lib/catalog.js'
 const categories = JSON.parse(readFileSync(new URL('../public/words.json', import.meta.url), 'utf8'))
 test('all 167 original attributes remain in the ten navigable categories', () => {
   assert.equal(Object.keys(categories).length, 10)
@@ -33,7 +33,29 @@ test('prompt includes every category in stable order and uses article for leadin
 test('every connected preview has real responsive files; full images use a separate URL', () => {
   assert.equal(filterCatalog(categories, '', 'all').filter(item => item.image).length, 167)
   for (const item of filterCatalog(categories, '', 'all').filter(item => item.image)) {
-    for (const size of [240, 480, 1280]) assert.ok(existsSync(new URL(`../public${imageSize(item.image, size)}`, import.meta.url)), `${item.name}: ${size}`)
+    for (const size of [240, 360, 480, 1280]) assert.ok(existsSync(new URL(`../public${imageSize(item.image, size)}`, import.meta.url)), `${item.name}: ${size}`)
   }
   assert.equal(imageSize('/images/reference-fox-480.webp', 1280), '/images/reference-fox-1280.webp')
+})
+test('Aqua Glass belongs only to materials and saved selections move without loss or duplication', () => {
+  assert.ok(categories['Surface & Material']['Aqua Glass'])
+  assert.ok(!categories['Texture & Detail Effects']['Aqua Glass'])
+  const old = { 'Surface & Material': ['Matte', 'Aqua Glass'], 'Texture & Detail Effects': ['Aqua Glass', 'Glow'], Lighting: ['Moonlit'] }
+  const original = structuredClone(old)
+  const migrated = migrateSelections(old)
+  assert.deepEqual(migrated['Surface & Material'], ['Matte', 'Aqua Glass'])
+  assert.deepEqual(migrated['Texture & Detail Effects'], ['Glow'])
+  assert.deepEqual(migrated.Lighting, ['Moonlit'])
+  assert.deepEqual(old, original)
+  assert.deepEqual(normalizeSelections({ 'Texture & Detail Effects': ['Aqua Glass'] }, categories), { 'Surface & Material': ['Aqua Glass'] })
+})
+test('generation contract and master are portable and the era exception has concrete prompts', () => {
+  const ledger = JSON.parse(readFileSync(new URL('../docs/image-generation.json', import.meta.url), 'utf8'))
+  assert.ok(existsSync(new URL(`../${ledger.referenceImage}`, import.meta.url)))
+  assert.ok(existsSync(new URL(`../${ledger.contract}`, import.meta.url)))
+  const eras = ledger.jobs.filter(job => job.category === 'Era & Setting')
+  assert.equal(eras.length, 17)
+  assert.ok(ledger.baseline.categoryOverrides['Era & Setting'].includes('fully integrate'))
+  assert.ok(eras.every(job => job.prompt.includes('LIVING') && job.prompt.includes('NO PEDESTAL')))
+  assert.ok(eras.every(job => job.originalPrompt && job.originalPrompt !== job.prompt))
 })

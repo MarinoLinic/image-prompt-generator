@@ -12,8 +12,17 @@ export const CATEGORY_META = {
 }
 export const BASELINE = '/images/reference-fox-480.webp'
 export const imageSize = (image, size) => image?.replace(/-480\.webp$/, `-${size}.webp`) || ''
-export function normalizeSelections(saved, categories) {
+export function migrateSelections(saved) {
   if (!saved || typeof saved !== 'object' || Array.isArray(saved)) return {}
+  const migrated = Object.fromEntries(Object.entries(saved).filter(([, values]) => Array.isArray(values)).map(([category, values]) => [category, [...new Set(values.filter(value => typeof value === 'string'))]]))
+  if (migrated['Texture & Detail Effects']?.includes('Aqua Glass')) {
+    migrated['Texture & Detail Effects'] = migrated['Texture & Detail Effects'].filter(value => value !== 'Aqua Glass')
+    migrated['Surface & Material'] = [...new Set([...(migrated['Surface & Material'] || []), 'Aqua Glass'])]
+  }
+  return Object.fromEntries(Object.entries(migrated).filter(([, values]) => values.length))
+}
+export function normalizeSelections(saved, categories) {
+  saved = migrateSelections(saved)
   return Object.fromEntries(Object.entries(categories).map(([category, options]) => [category,
     [...new Set((Array.isArray(saved[category]) ? saved[category] : []).filter(value => typeof value === 'string' && Object.hasOwn(options, value)))],
   ]).filter(([, values]) => values.length))

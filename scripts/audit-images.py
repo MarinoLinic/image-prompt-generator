@@ -1,6 +1,7 @@
 """Verify coverage and render labeled contact sheets for visual review."""
 import argparse
 import json
+import statistics
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
@@ -31,7 +32,7 @@ for index, (category, items) in enumerate(words.items()):
             missing.append(f'{category}: {name}')
             draw.text((x + 8, y + 60), 'PENDING', font=small, fill='#9c5949')
         else:
-            for size in [240, 480, 1280]:
+            for size in [240, 360, 480, 1280]:
                 path = ROOT / 'public' / item['image'].replace('-480.webp', f'-{size}.webp').lstrip('/')
                 if not path.exists():
                     errors.append(str(path))
@@ -53,7 +54,12 @@ for index, (category, items) in enumerate(words.items()):
         draw.text((x + 7, y + 146), '\n'.join(lines), font=small, fill='#27372e', spacing=1)
     sheet.save(args.review_dir / f'contact-{index + 1:02}.jpg', quality=90)
 assets = list((ROOT / 'public/images').glob('*.webp'))
-report = {'attributes': sum(len(items) for items in words.values()), 'covered': 167 - len(missing), 'uniqueImages': len(ledger['assets']), 'responsiveFiles': len(assets), 'totalBytes': sum(path.stat().st_size for path in assets), 'missing': missing, 'errors': errors}
+count = sum(len(items) for items in words.values())
+report = {'attributes': count, 'covered': count - len(missing), 'uniqueImages': len(ledger['assets']), 'responsiveFiles': len(assets), 'totalBytes': sum(path.stat().st_size for path in assets), 'missing': missing, 'errors': errors}
+report['sizes'] = {}
+for size in [240, 360, 480, 1280]:
+    lengths = [path.stat().st_size for path in assets if path.name.endswith(f'-{size}.webp')]
+    report['sizes'][str(size)] = {'files': len(lengths), 'totalBytes': sum(lengths), 'medianBytes': statistics.median(lengths) if lengths else 0, 'maxBytes': max(lengths, default=0)}
 (args.review_dir / 'image-audit.json').write_text(json.dumps(report, indent=2), encoding='utf-8')
 print(json.dumps(report))
 if errors or (args.complete and missing): raise SystemExit(1)
