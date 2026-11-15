@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Category from './Category'
 import CopyButton from './CopyButton'
 
@@ -156,7 +156,7 @@ const PromptGenerator = () => {
 					/>
 				))}
 				{Object.keys(filteredCategories).length === 0 && (
-					<p className="no-results">No attributes match "{search}".</p>
+					<p className="no-results">No attributes match &quot;{search}&quot;.</p>
 				)}
 			</div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const Checkbox = ({ label, checked, onChange, description, image }) => {
 	const [showTooltip, setShowTooltip] = useState(false)

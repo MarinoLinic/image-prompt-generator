@@ -1,189 +1,690 @@
 {
-	"Art Style": {
-		"Photorealistic": {"description":"Extremely lifelike rendering, indistinguishable from a high-quality photograph.","image":""},
-		"Oil Painting": {"description":"Rich, textured brushstrokes and blended pigments in the style of classical oil paint.","image":""},
-		"Watercolor": {"description":"Soft, translucent washes of color with visible paper texture and gentle bleeding.","image":""},
-		"Digital Art": {"description":"Clean, polished illustration created with digital painting tools.","image":""},
-		"Pixel Art": {"description":"Retro-style artwork composed of visible square pixels, common in classic video games.","image":""},
-		"Vector Art": {"description":"Crisp, scalable shapes with flat colors and clean outlines.","image":""},
-		"Anime": {"description":"Japanese animation style with expressive eyes, clean lines, and stylized shading.","image":""},
-		"Manga": {"description":"Black-and-white Japanese comic style with screentone shading and dynamic linework.","image":""},
-		"Comic Book": {"description":"Bold outlines, halftone dots, and vivid colors in the style of Western comics.","image":""},
-		"Sketch": {"description":"Loose pencil or ink linework with an unfinished, hand-drawn feel.","image":""},
-		"Line Art": {"description":"Clean, minimal artwork built purely from outlines without shading.","image":""},
-		"Low Poly": {"description":"Stylized 3D look built from a small number of flat polygonal facets.","image":""},
-		"Concept Art": {"description":"Polished illustrative artwork used for film/game pre-production, often moody and cinematic.","image":""},
-		"Matte Painting": {"description":"Photorealistic painted environment, traditionally used as a film backdrop.","image":""},
-		"Charcoal Drawing": {"description":"Smudgy, high-contrast monochrome drawing with deep blacks and soft gradients.","image":""},
-		"Acrylic Painting": {"description":"Bold, fast-drying paint with vibrant flat or layered color.","image":""},
-		"Ukiyo-e": {"description":"Japanese woodblock print style with flat color areas and flowing contour lines.","image":""},
-		"Stained Glass": {"description":"Colored sections separated by dark lead lines, like a cathedral window.","image":""},
-		"Impressionism": {"description":"Loose visible brushwork capturing light and atmosphere over fine detail, like Monet.","image":""},
-		"Art Nouveau": {"description":"Flowing organic lines, floral ornament, and elegant figures in the style of Mucha.","image":""},
-		"Blueprint": {"description":"White technical linework on blue paper, like an engineering schematic.","image":""},
-		"Claymation": {"description":"Stop-motion clay look with fingerprints, handmade bumps, and soft shapes.","image":""},
-		"Graffiti": {"description":"Bold spray-paint street art with drips, tags, and layered colors.","image":""},
-		"Retro Game": {"description":"Artwork styled like a classic 8/16-bit era video game — chunky pixels, game-chrome feel, and HUD-era digital rendering.","image":""},
-		"Cel Shaded": {"description":"Flat color areas bounded by bold ink outlines, like hand-painted animation cels.","image":""},
-		"Ghibli": {"description":"Studio Ghibli / Hayao Miyazaki style — lush hand-painted backgrounds, gentle rounded character design, and warm naturalistic light.","image":""},
-		"90s Anime": {"description":"Late-80s/90s OVA-era anime — angular faces, spiky hair, dramatic action poses, and thick confident ink lines.","image":""},
-		"Frutiger Aero": {"description":"Mid-2000s tech optimism aesthetic — glossy aqua glass, bubbly shapes, water droplets, sky-blue gradients, fresh grass and fisheye lens flare, like Windows Vista / iPod-era UI.","image":""},
-		"Early 3D (N64)": {"description":"Mid-90s console 3D: stable low-poly geometry, Gouraud shading, tiny textures smeared soft, and distance fog hiding the draw depth.","image":""},
-		"Early 3D (PS1)": {"description":"Mid-90s console 3D: chunky low-poly geometry with affine texture warping on angled surfaces, slight vertex jitter, nearest-neighbor textures, and heavy ordered dithering.","image":""},
-		"Vintage Storybook Illustration": {"description":"Golden-age printed book/comic plate look: engraved pen-and-ink linework, flat limited spot colors, halftone print grain, and theatrical ornamental composition.","image":""},
-		"8-bit (NES)": {"description":"NES-era pixel art: chunky 8×8 tiles, bold black outlines, 2-3 colors per sprite from a harsh fixed palette, on a 256×240 frame.","image":""},
-		"16-bit (SNES)": {"description":"Rich 16-bit era game art: lush hand-drawn pixel scenes, smooth color gradients, parallax layers, and Mode 7-style rotated planes.","image":""},
-		"Cartoon Saloon Style": {"description":"Flat graphic 2D feature-animation look: filled shapes with confident ink contours, geometric dot-eyed characters, poster-like drapery folds, and watercolor-textured backgrounds.","image":""},
-		"Painterly": {"description":"Rendered with visible painterly brushstrokes and blended color, keeping the texture of hand-painted artwork.","image":""},
-		"VGA Game": {"description":"DOS-era PC game screenshot: dithered 256-color painted scenes and simple pixel sprites, like a late-80s/early-90s point-and-click adventure.","image":""},
-		"Soviet Auteur Animation": {"description":"Poetic mid-century Soviet animation: hand-inked cel characters over painterly gouache backgrounds, muted naturalist palette, soft diffused light, and dreamlike pacing — like Norstein's Hedgehog in the Fog.","image":""},
-		"Disney Animation (Renaissance)": {"description":"Lush hand-painted watercolor backgrounds with expressive cel characters, musical-theater drama and warm saturated color — like 90s Disney features.","image":""},
-		"Golden Age Animation": {"description":"Vintage 1930s-40s animation: rubber-hose characters with pie-cut eyes, bouncy squash-and-stretch motion, watercolor backdrops, and film-grain softness — early Disney and Fleischer.","image":""},
-		"2.5D": {"description":"Pixel or sprite art placed in a 3D-style scene with layered depth planes and diorama staging — HD-2D, Paper-Mario, or New-Super-Mario-Bros-style depth.","image":""},
-		"Pop Art": {"description":"Bold flat colors, halftone dots, and comic-derived mass-media imagery in the style of Warhol and Lichtenstein.","image":""},
-		"Risograph": {"description":"Risograph print look: grainy fluorescent inks, slight color misregistration, and visible paper texture.","image":""},
-		"Retro CG Render": {"description":"Glossy late-90s CGI character render: smooth airbrushed shading, bold rim light, and a saturated toy-plastic sheen — N64-era game box art like Banjo-Kazooie or Donkey Kong Country's pre-rendered look.","image":""}
-	},
-	"Surface & Material": {
-		"Matte": {"description":"A non-reflective surface that diffuses light evenly.","image":""},
-		"Metallic": {"description":"A shiny and reflective surface that mimics metal properties.","image":""},
-		"Glossy": {"description":"A smooth, polished surface with sharp, bright reflections.","image":""},
-		"Glass": {"description":"Transparent or translucent material with refraction and specular highlights.","image":""},
-		"Bark-like": {"description":"A rough, textured surface resembling tree bark.","image":""},
-		"Wooden": {"description":"Warm organic texture with visible grain and knots.","image":""},
-		"Marble": {"description":"Smooth stone with elegant veining patterns.","image":""},
-		"Rusty": {"description":"Oxidized, corroded metal with orange-brown patina and flaking texture.","image":""},
-		"Velvet": {"description":"Soft, plush fabric with a dense light-absorbing pile.","image":""},
-		"Iridescent": {"description":"Surface that shifts color depending on viewing angle, like a soap bubble.","image":""},
-		"Holographic": {"description":"Rainbow-shifting reflective surface with futuristic shimmer.","image":""},
-		"Brushed Metal": {"description":"Metal with fine parallel scratches giving a dull satin sheen.","image":""},
-		"Ceramic": {"description":"Glazed pottery surface — smooth, hard, and slightly glossy.","image":""},
-		"Paper Mache": {"description":"Rough, layered paper texture with a handmade feel.","image":""}
-	},
-	"Perspective & Angle": {
-		"Isometric": {"description":"A 3D-like perspective where all axes are equally foreshortened at 120-degree angles; common in strategy games and pixel art.","image":""},
-		"Dimetric": {"description":"A perspective similar to isometric but with two axes foreshortened unequally.","image":""},
-		"Bird's Eye View": {"description":"A top-down perspective looking directly down onto a scene.","image":""},
-		"Worm's Eye View": {"description":"Viewed from ground level looking up, making subjects appear towering.","image":""},
-		"Wide Angle": {"description":"Expansive field of view with slight distortion, capturing more of the scene.","image":""},
-		"Macro": {"description":"Extreme close-up revealing tiny details invisible to the naked eye.","image":""},
-		"Fisheye": {"description":"Ultra-wide lens look with strong curved distortion at the edges.","image":""},
-		"Dutch Angle": {"description":"Tilted horizon line creating tension and dynamism.","image":""},
-		"Over-the-Shoulder": {"description":"Framed from behind a subject's shoulder, common in film and games.","image":""},
-		"Low Angle": {"description":"Camera positioned below the subject looking up, making it appear heroic, imposing, or monumental.","image":""},
-		"High Angle": {"description":"Camera positioned above the subject looking down, making subjects feel small, vulnerable, or surveyed.","image":""},
-		"First-Person POV": {"description":"Seen directly through the character's own eyes, with hands or a weapon often visible at the frame edges, like an FPS view.","image":""},
-		"One-Point Perspective": {"description":"All depth lines converging on a single central vanishing point — corridors, roads, and tunnels drawn head-on.","image":""},
-		"Three-Quarter View": {"description":"Subject turned about 45 degrees from the camera, showing face and body at their most dimensional — the classic character-sheet angle.","image":""},
-		"Front View": {"description":"Subject facing the camera square-on, symmetrical and direct, like a character-selection pose.","image":""},
-		"Profile View": {"description":"Subject shown in strict side view, like a coin portrait or walk-cycle reference.","image":""}
-	},
-	"Composition": {
-		"Symmetrical": {"description":"Perfectly mirrored composition around a central axis.","image":""},
-		"Silhouette": {"description":"Subject rendered as a solid dark shape against a brighter background.","image":""},
-		"Leading Lines": {"description":"Composition guides the eye along converging lines toward the subject.","image":""},
-		"Negative Space": {"description":"Large areas of emptiness deliberately framing a small subject.","image":""},
-		"Panoramic": {"description":"Very wide framing capturing a sweeping horizontal expanse.","image":""},
-		"Minimalist Composition": {"description":"Extremely sparse framing with few elements and lots of space.","image":""},
-		"Maximalist Composition": {"description":"Densely packed frame overflowing with detail and objects.","image":""}
-	},
-	"Lighting": {
-		"Golden Hour": {"description":"Warm, soft sunlight shortly after sunrise or before sunset.","image":""},
-		"Neon Lighting": {"description":"Glowing colored light, often pink/cyan, with a cyberpunk feel.","image":""},
-		"Chiaroscuro": {"description":"Strong contrast between light and dark for dramatic depth, like Caravaggio.","image":""},
-		"Backlit": {"description":"Subject lit from behind, creating a glowing rim and silhouetted front.","image":""},
-		"Soft Diffused": {"description":"Even, gentle light with no harsh shadows, like an overcast day.","image":""},
-		"Volumetric": {"description":"Visible rays of light through fog or dust (god rays).","image":""},
-		"Bioluminescent": {"description":"Organic glowing light emitted by the subject itself.","image":""},
-		"Studio Lighting": {"description":"Controlled, professional three-point lighting with clean shadows.","image":""},
-		"Candlelit": {"description":"Warm, flickering light with deep surrounding shadows.","image":""},
-		"Moonlit": {"description":"Cool, pale blue-white night lighting.","image":""},
-		"Blue Hour": {"description":"Deep blue ambient light just before sunrise or after sunset.","image":""},
-		"Dappled Light": {"description":"Patches of light broken up by foliage or objects, creating spotted shadow patterns.","image":""}
-	},
-	"Mood & Atmosphere": {
-		"Dreamy": {"description":"Soft, hazy, and ethereal with a gentle idealized feel.","image":""},
-		"Eerie": {"description":"Unsettling and mysterious, on the edge of unsettling.","image":""},
-		"Whimsical": {"description":"Playful, fanciful, and charmingly imaginative.","image":""},
-		"Melancholic": {"description":"Quietly sad and reflective, often with muted tones.","image":""},
-		"Serene": {"description":"Calm, peaceful, and tranquil.","image":""},
-		"Apocalyptic": {"description":"Ruined, desolate world after catastrophe.","image":""},
-		"Utopian": {"description":"Idealized, perfect world — clean, bright, harmonious.","image":""},
-		"Nostalgic": {"description":"Warm memory-evoking feel, often with vintage color grading.","image":""},
-		"Surreal": {"description":"Illogical, dreamlike juxtapositions in the style of Dal&iacute; or Magritte.","image":""},
-		"Ominous": {"description":"Threatening and foreboding atmosphere.","image":""},
-		"Epic": {"description":"Monumental, awe-inspiring scale that dwarfs the viewer.","image":""},
-		"Cozy": {"description":"Warm, intimate, and inviting — soft textures and a sense of home.","image":""}
-	},
-	"Color Palette": {
-		"Monochrome": {"description":"Single-hue composition, often grayscale.","image":""},
-		"Pastel": {"description":"Soft, pale, desaturated colors with a gentle feel.","image":""},
-		"Vaporwave": {"description":"Neon pinks, purples, and cyans with retro 80s/90s nostalgia.","image":""},
-		"Earthy Tones": {"description":"Warm browns, greens, and ochres inspired by nature.","image":""},
-		"Duotone": {"description":"Image rendered in only two contrasting colors.","image":""},
-		"Neon Palette": {"description":"Saturated electric colors against dark backgrounds.","image":""},
-		"Sepia": {"description":"Warm brown-tinted tones like an aged photograph.","image":""},
-		"Complementary": {"description":"Colors opposite each other on the color wheel (e.g. teal & orange) for strong contrast.","image":""},
-		"Analogous": {"description":"Neighboring hues on the color wheel for harmonious blending.","image":""},
-		"High Saturation": {"description":"Intensely vivid, punchy colors.","image":""},
-		"Limited Palette": {"description":"Constrained to a small fixed set of colors (8–32), like classic game sprites — flat color bands instead of smooth blends.","image":""},
-		"Jewel Tones": {"description":"Deep, richly saturated hues — emerald, oxblood, sapphire, and antique gold.","image":""},
-		"Muted Palette": {"description":"Desaturated, grey-undertoned colors with a subdued, quiet mood — washed-out rather than pale.","image":""}
-	},
-	"Era & Setting": {
-		"Cyberpunk": {"description":"High-tech dystopia with neon, rain, and sprawling megacities.","image":""},
-		"Steampunk": {"description":"Victorian-era technology powered by steam, brass, and gears.","image":""},
-		"Retro Futurism": {"description":"The future as imagined in the 1950s-70s — chrome, fins, atomic motifs.","image":""},
-		"Medieval": {"description":"Castles, knights, and rustic villages of the Middle Ages.","image":""},
-		"Art Deco": {"description":"1920s glamour with geometric patterns, gold, and symmetry.","image":""},
-		"Solarpunk": {"description":"Optimistic green future with lush vegetation and sustainable tech.","image":""},
-		"Dieselpunk": {"description":"Gritty interwar-era tech aesthetic with heavy machinery.","image":""},
-		"Baroque": {"description":"Ornate 17th-century opulence with dramatic movement and gold detail.","image":""},
-		"Ancient": {"description":"Classical Greco-Roman world of marble temples, ruins, and mythology.","image":""},
-		"Prehistoric": {"description":"Primordial world of caves, volcanoes, and colossal ancient life.","image":""},
-		"Feudal Japan": {"description":"Edo-era setting with torii gates, castles, and samurai aesthetics.","image":""},
-		"Wild West": {"description":"Dusty frontier towns, saloons, and endless desert landscapes.","image":""},
-		"Victorian Gothic": {"description":"Dark 19th-century world of gothic spires, fog, and gaslight — no steam, just gloom.","image":""},
-		"Underwater": {"description":"Submerged world with coral, caustic light, drifting particles, and distorted sound.","image":""},
-		"Dark Fantasy": {"description":"Grim medieval fantasy of monsters, ruins, and shadowed forests — brooding and dangerous.","image":""},
-		"Celtic": {"description":"Ancient-to-medieval Celtic world — knotwork, La Tène spirals, illuminated manuscript ornament, standing stones, and round towers.","image":""},
-		"Post-Soviet": {"description":"Post-Soviet urban landscape — concrete panel-block housing, trolleybus wires, worn courtyards, and brutalist remnants.","image":""}
-	},
-	"Texture & Detail Effects": {
-		"Gritty": {"description":"Rough, dirty, realistic texture with grime and wear.","image":""},
-		"Weathered": {"description":"Aged by exposure — faded, cracked, and worn.","image":""},
-		"Glitchy": {"description":"Digital corruption artifacts — color fringing, scanlines, datamosh.","image":""},
-		"Bokeh": {"description":"Soft blurred background points of light from shallow depth of field.","image":""},
-		"Vignette": {"description":"Darkened edges drawing focus to the center.","image":""},
-		"Film Grain": {"description":"Analog camera noise giving a textured, cinematic feel.","image":""},
-		"Motion Blur": {"description":"Streaking along the direction of movement to imply speed.","image":""},
-		"Lens Flare": {"description":"Bright light scattering rings and streaks across the frame.","image":""},
-		"Double Exposure": {"description":"Two images blended into one, like overlapping film photos.","image":""},
-		"Dithering": {"description":"Gradients built from visible dot patterns (ordered/Bayer dithering) instead of smooth blends — classic limited-palette pixel art shading.","image":""},
-		"CRT": {"description":"Faint CRT scanlines and phosphor glow over the whole image, like playing on an old tube TV.","image":""},
-		"Aqua Glass": {"description":"Translucent blue-tinted glass with rounded highlights, refraction, and a wet polished sheen — 2000s aqua UI button look.","image":""},
-		"Bilinear Blur": {"description":"Whole frame softened as if tiny textures were bilinear-filtered — the misty blur of a 320×240 console render.","image":""},
-		"Low-Res Textures": {"description":"Chunky, visibly low-resolution textures stretched over geometry, with obvious tiling — scarce texture memory of a 90s console.","image":""},
-		"Crosshatching": {"description":"Form and shadow built from dense layers of fine parallel pen lines, like an engraved book illustration.","image":""},
-		"Pixelated": {"description":"Image broken into visible chunky pixels, like a low-resolution capture enlarged.","image":""},
-		"Glow": {"description":"Bright light sources bleeding soft halos into their surroundings, like overexposed bloom.","image":""},
-		"Depth Fog": {"description":"Background receding into thick atmospheric mist, layers dissolving with distance while the foreground stays sharp.","image":""},
-		"Depth of Field": {"description":"Subject sharp while the background melts into soft focus blur, like a wide-aperture camera lens.","image":""}
-	},
-	"Background & Environment": {
-		"Forest": {"description":"Dense woodland backdrop with thick trunks and layered foliage.","image":""},
-		"City Skyline": {"description":"Urban backdrop of towers, rooftops, and glowing windows.","image":""},
-		"Cosmic": {"description":"Deep space backdrop with stars, nebulae, and distant galaxies.","image":""},
-		"Ocean": {"description":"Open sea backdrop with waves stretching to the horizon.","image":""},
-		"Mountains": {"description":"Towering peaks and ridges receding into atmospheric haze.","image":""},
-		"Desert": {"description":"Endless sand dunes under a vast empty sky.","image":""},
-		"Clouds": {"description":"Subject floating among soft billowing clouds.","image":""},
-		"Garden": {"description":"Lush flowerbeds, hedges, and winding paths.","image":""},
-		"Industrial": {"description":"Factories, pipes, concrete, and heavy machinery.","image":""},
-		"Starry Night": {"description":"Dark backdrop scattered with bright stars and galactic band.","image":""},
-		"White": {"description":"Plain white studio background — clean product-shot isolation.","image":""},
-		"Black": {"description":"Solid black background for dramatic subject isolation.","image":""},
-		"Gradient": {"description":"Smooth color-fade background, from soft pastels to deep vignettes.","image":""},
-		"Transparent": {"description":"Subject isolated with no background at all, like a cut-out asset (PNG-style).","image":""}
-	}
+  "Art Style": {
+    "Photorealistic": {
+      "description": "Extremely lifelike rendering, indistinguishable from a high-quality photograph.",
+      "image": "/images/reference-fox-480.webp"
+    },
+    "Oil Painting": {
+      "description": "Rich, textured brushstrokes and blended pigments in the style of classical oil paint.",
+      "image": "/images/art-style--oil-painting-480.webp"
+    },
+    "Watercolor": {
+      "description": "Soft, translucent washes of color with visible paper texture and gentle bleeding.",
+      "image": "/images/art-style--watercolor-480.webp"
+    },
+    "Digital Art": {
+      "description": "Clean, polished illustration created with digital painting tools.",
+      "image": "/images/art-style--digital-art-480.webp"
+    },
+    "Pixel Art": {
+      "description": "Retro-style artwork composed of visible square pixels, common in classic video games.",
+      "image": "/images/art-style--pixel-art-480.webp"
+    },
+    "Vector Art": {
+      "description": "Crisp, scalable shapes with flat colors and clean outlines.",
+      "image": "/images/art-style--vector-art-480.webp"
+    },
+    "Anime": {
+      "description": "Japanese animation style with expressive eyes, clean lines, and stylized shading.",
+      "image": "/images/art-style--anime-480.webp"
+    },
+    "Manga": {
+      "description": "Black-and-white Japanese comic style with screentone shading and dynamic linework.",
+      "image": "/images/art-style--manga-480.webp"
+    },
+    "Comic Book": {
+      "description": "Bold outlines, halftone dots, and vivid colors in the style of Western comics.",
+      "image": "/images/art-style--comic-book-480.webp"
+    },
+    "Sketch": {
+      "description": "Loose pencil or ink linework with an unfinished, hand-drawn feel.",
+      "image": "/images/art-style--sketch-480.webp"
+    },
+    "Line Art": {
+      "description": "Clean, minimal artwork built purely from outlines without shading.",
+      "image": "/images/art-style--line-art-480.webp"
+    },
+    "Low Poly": {
+      "description": "Stylized 3D look built from a small number of flat polygonal facets.",
+      "image": "/images/art-style--low-poly-480.webp"
+    },
+    "Concept Art": {
+      "description": "Polished illustrative artwork used for film/game pre-production, often moody and cinematic.",
+      "image": "/images/art-style--concept-art-480.webp"
+    },
+    "Matte Painting": {
+      "description": "Photorealistic painted environment, traditionally used as a film backdrop.",
+      "image": "/images/art-style--matte-painting-480.webp"
+    },
+    "Charcoal Drawing": {
+      "description": "Smudgy, high-contrast monochrome drawing with deep blacks and soft gradients.",
+      "image": "/images/art-style--charcoal-drawing-480.webp"
+    },
+    "Acrylic Painting": {
+      "description": "Bold, fast-drying paint with vibrant flat or layered color.",
+      "image": "/images/art-style--acrylic-painting-480.webp"
+    },
+    "Ukiyo-e": {
+      "description": "Japanese woodblock print style with flat color areas and flowing contour lines.",
+      "image": "/images/art-style--ukiyo-e-480.webp"
+    },
+    "Stained Glass": {
+      "description": "Colored sections separated by dark lead lines, like a cathedral window.",
+      "image": "/images/art-style--stained-glass-480.webp"
+    },
+    "Impressionism": {
+      "description": "Loose visible brushwork capturing light and atmosphere over fine detail, like Monet.",
+      "image": "/images/art-style--impressionism-480.webp"
+    },
+    "Art Nouveau": {
+      "description": "Flowing organic lines, floral ornament, and elegant figures in the style of Mucha.",
+      "image": "/images/art-style--art-nouveau-480.webp"
+    },
+    "Blueprint": {
+      "description": "White technical linework on blue paper, like an engineering schematic.",
+      "image": "/images/art-style--blueprint-480.webp"
+    },
+    "Claymation": {
+      "description": "Stop-motion clay look with fingerprints, handmade bumps, and soft shapes.",
+      "image": "/images/art-style--claymation-480.webp"
+    },
+    "Graffiti": {
+      "description": "Bold spray-paint street art with drips, tags, and layered colors.",
+      "image": "/images/art-style--graffiti-480.webp"
+    },
+    "Retro Game": {
+      "description": "Artwork styled like a classic 8/16-bit era video game — chunky pixels, game-chrome feel, and HUD-era digital rendering.",
+      "image": "/images/art-style--retro-game-480.webp"
+    },
+    "Cel Shaded": {
+      "description": "Flat color areas bounded by bold ink outlines, like hand-painted animation cels.",
+      "image": "/images/art-style--cel-shaded-480.webp"
+    },
+    "Ghibli": {
+      "description": "Studio Ghibli / Hayao Miyazaki style — lush hand-painted backgrounds, gentle rounded character design, and warm naturalistic light.",
+      "image": "/images/art-style--ghibli-480.webp"
+    },
+    "90s Anime": {
+      "description": "Late-80s/90s OVA-era anime — angular faces, spiky hair, dramatic action poses, and thick confident ink lines.",
+      "image": "/images/art-style--90s-anime-480.webp"
+    },
+    "Frutiger Aero": {
+      "description": "Mid-2000s tech optimism aesthetic — glossy aqua glass, bubbly shapes, water droplets, sky-blue gradients, fresh grass and fisheye lens flare, like Windows Vista / iPod-era UI.",
+      "image": "/images/art-style--frutiger-aero-480.webp"
+    },
+    "Early 3D (N64)": {
+      "description": "Mid-90s console 3D: stable low-poly geometry, Gouraud shading, tiny textures smeared soft, and distance fog hiding the draw depth.",
+      "image": "/images/art-style--early-3d-n64-480.webp"
+    },
+    "Early 3D (PS1)": {
+      "description": "Mid-90s console 3D: chunky low-poly geometry with affine texture warping on angled surfaces, slight vertex jitter, nearest-neighbor textures, and heavy ordered dithering.",
+      "image": "/images/art-style--early-3d-ps1-480.webp"
+    },
+    "Vintage Storybook Illustration": {
+      "description": "Golden-age printed book/comic plate look: engraved pen-and-ink linework, flat limited spot colors, halftone print grain, and theatrical ornamental composition.",
+      "image": "/images/art-style--vintage-storybook-illustration-480.webp"
+    },
+    "8-bit (NES)": {
+      "description": "NES-era pixel art: chunky 8×8 tiles, bold black outlines, 2-3 colors per sprite from a harsh fixed palette, on a 256×240 frame.",
+      "image": "/images/art-style--8-bit-nes-480.webp"
+    },
+    "16-bit (SNES)": {
+      "description": "Rich 16-bit era game art: lush hand-drawn pixel scenes, smooth color gradients, parallax layers, and Mode 7-style rotated planes.",
+      "image": "/images/art-style--16-bit-snes-480.webp"
+    },
+    "Cartoon Saloon Style": {
+      "description": "Flat graphic 2D feature-animation look: filled shapes with confident ink contours, geometric dot-eyed characters, poster-like drapery folds, and watercolor-textured backgrounds.",
+      "image": "/images/art-style--cartoon-saloon-style-480.webp"
+    },
+    "Painterly": {
+      "description": "Rendered with visible painterly brushstrokes and blended color, keeping the texture of hand-painted artwork.",
+      "image": "/images/art-style--painterly-480.webp"
+    },
+    "VGA Game": {
+      "description": "DOS-era PC game screenshot: dithered 256-color painted scenes and simple pixel sprites, like a late-80s/early-90s point-and-click adventure.",
+      "image": "/images/art-style--vga-game-480.webp"
+    },
+    "Soviet Auteur Animation": {
+      "description": "Poetic mid-century Soviet animation: hand-inked cel characters over painterly gouache backgrounds, muted naturalist palette, soft diffused light, and dreamlike pacing — like Norstein's Hedgehog in the Fog.",
+      "image": "/images/art-style--soviet-auteur-animation-480.webp"
+    },
+    "Disney Animation (Renaissance)": {
+      "description": "Lush hand-painted watercolor backgrounds with expressive cel characters, musical-theater drama and warm saturated color — like 90s Disney features.",
+      "image": "/images/art-style--disney-animation-renaissance-480.webp"
+    },
+    "Golden Age Animation": {
+      "description": "Vintage 1930s-40s animation: rubber-hose characters with pie-cut eyes, bouncy squash-and-stretch motion, watercolor backdrops, and film-grain softness — early Disney and Fleischer.",
+      "image": "/images/art-style--golden-age-animation-480.webp"
+    },
+    "2.5D": {
+      "description": "Pixel or sprite art placed in a 3D-style scene with layered depth planes and diorama staging — HD-2D, Paper-Mario, or New-Super-Mario-Bros-style depth.",
+      "image": "/images/art-style--2-5d-480.webp"
+    },
+    "Pop Art": {
+      "description": "Bold flat colors, halftone dots, and comic-derived mass-media imagery in the style of Warhol and Lichtenstein.",
+      "image": "/images/art-style--pop-art-480.webp"
+    },
+    "Risograph": {
+      "description": "Risograph print look: grainy fluorescent inks, slight color misregistration, and visible paper texture.",
+      "image": "/images/art-style--risograph-480.webp"
+    },
+    "Retro CG Render": {
+      "description": "Glossy late-90s CGI character render: smooth airbrushed shading, bold rim light, and a saturated toy-plastic sheen — N64-era game box art like Banjo-Kazooie or Donkey Kong Country's pre-rendered look.",
+      "image": "/images/art-style--retro-cg-render-480.webp"
+    }
+  },
+  "Surface & Material": {
+    "Matte": {
+      "description": "A non-reflective surface that diffuses light evenly.",
+      "image": "/images/reference-fox-480.webp"
+    },
+    "Metallic": {
+      "description": "A shiny and reflective surface that mimics metal properties.",
+      "image": "/images/surface-material--metallic-480.webp"
+    },
+    "Glossy": {
+      "description": "A smooth, polished surface with sharp, bright reflections.",
+      "image": "/images/surface-material--glossy-480.webp"
+    },
+    "Glass": {
+      "description": "Transparent or translucent material with refraction and specular highlights.",
+      "image": "/images/surface-material--glass-480.webp"
+    },
+    "Bark-like": {
+      "description": "A rough, textured surface resembling tree bark.",
+      "image": "/images/surface-material--bark-like-480.webp"
+    },
+    "Wooden": {
+      "description": "Warm organic texture with visible grain and knots.",
+      "image": "/images/surface-material--wooden-480.webp"
+    },
+    "Marble": {
+      "description": "Smooth stone with elegant veining patterns.",
+      "image": "/images/surface-material--marble-480.webp"
+    },
+    "Rusty": {
+      "description": "Oxidized, corroded metal with orange-brown patina and flaking texture.",
+      "image": "/images/surface-material--rusty-480.webp"
+    },
+    "Velvet": {
+      "description": "Soft, plush fabric with a dense light-absorbing pile.",
+      "image": "/images/surface-material--velvet-480.webp"
+    },
+    "Iridescent": {
+      "description": "Surface that shifts color depending on viewing angle, like a soap bubble.",
+      "image": "/images/surface-material--iridescent-480.webp"
+    },
+    "Holographic": {
+      "description": "Rainbow-shifting reflective surface with futuristic shimmer.",
+      "image": "/images/surface-material--holographic-480.webp"
+    },
+    "Brushed Metal": {
+      "description": "Metal with fine parallel scratches giving a dull satin sheen.",
+      "image": "/images/surface-material--brushed-metal-480.webp"
+    },
+    "Ceramic": {
+      "description": "Glazed pottery surface — smooth, hard, and slightly glossy.",
+      "image": "/images/surface-material--ceramic-480.webp"
+    },
+    "Paper Mache": {
+      "description": "Rough, layered paper texture with a handmade feel.",
+      "image": "/images/surface-material--paper-mache-480.webp"
+    }
+  },
+  "Perspective & Angle": {
+    "Isometric": {
+      "description": "A 3D-like perspective where all axes are equally foreshortened at 120-degree angles; common in strategy games and pixel art.",
+      "image": "/images/perspective-angle--isometric-480.webp"
+    },
+    "Dimetric": {
+      "description": "A perspective similar to isometric but with two axes foreshortened unequally.",
+      "image": "/images/perspective-angle--dimetric-480.webp"
+    },
+    "Bird's Eye View": {
+      "description": "A top-down perspective looking directly down onto a scene.",
+      "image": "/images/perspective-angle--bird-s-eye-view-480.webp"
+    },
+    "Worm's Eye View": {
+      "description": "Viewed from ground level looking up, making subjects appear towering.",
+      "image": "/images/perspective-angle--worm-s-eye-view-480.webp"
+    },
+    "Wide Angle": {
+      "description": "Expansive field of view with slight distortion, capturing more of the scene.",
+      "image": "/images/perspective-angle--wide-angle-480.webp"
+    },
+    "Macro": {
+      "description": "Extreme close-up revealing tiny details invisible to the naked eye.",
+      "image": "/images/perspective-angle--macro-480.webp"
+    },
+    "Fisheye": {
+      "description": "Ultra-wide lens look with strong curved distortion at the edges.",
+      "image": "/images/perspective-angle--fisheye-480.webp"
+    },
+    "Dutch Angle": {
+      "description": "Tilted horizon line creating tension and dynamism.",
+      "image": "/images/perspective-angle--dutch-angle-480.webp"
+    },
+    "Over-the-Shoulder": {
+      "description": "Framed from behind a subject's shoulder, common in film and games.",
+      "image": "/images/perspective-angle--over-the-shoulder-480.webp"
+    },
+    "Low Angle": {
+      "description": "Camera positioned below the subject looking up, making it appear heroic, imposing, or monumental.",
+      "image": "/images/perspective-angle--low-angle-480.webp"
+    },
+    "High Angle": {
+      "description": "Camera positioned above the subject looking down, making subjects feel small, vulnerable, or surveyed.",
+      "image": "/images/perspective-angle--high-angle-480.webp"
+    },
+    "First-Person POV": {
+      "description": "Seen directly through the character's own eyes, with hands or a weapon often visible at the frame edges, like an FPS view.",
+      "image": "/images/perspective-angle--first-person-pov-480.webp"
+    },
+    "One-Point Perspective": {
+      "description": "All depth lines converging on a single central vanishing point — corridors, roads, and tunnels drawn head-on.",
+      "image": "/images/perspective-angle--one-point-perspective-480.webp"
+    },
+    "Three-Quarter View": {
+      "description": "Subject turned about 45 degrees from the camera, showing face and body at their most dimensional — the classic character-sheet angle.",
+      "image": "/images/reference-fox-480.webp"
+    },
+    "Front View": {
+      "description": "Subject facing the camera square-on, symmetrical and direct, like a character-selection pose.",
+      "image": "/images/perspective-angle--front-view-480.webp"
+    },
+    "Profile View": {
+      "description": "Subject shown in strict side view, like a coin portrait or walk-cycle reference.",
+      "image": "/images/perspective-angle--profile-view-480.webp"
+    }
+  },
+  "Composition": {
+    "Symmetrical": {
+      "description": "Perfectly mirrored composition around a central axis.",
+      "image": "/images/composition--symmetrical-480.webp"
+    },
+    "Silhouette": {
+      "description": "Subject rendered as a solid dark shape against a brighter background.",
+      "image": "/images/composition--silhouette-480.webp"
+    },
+    "Leading Lines": {
+      "description": "Composition guides the eye along converging lines toward the subject.",
+      "image": "/images/composition--leading-lines-480.webp"
+    },
+    "Negative Space": {
+      "description": "Large areas of emptiness deliberately framing a small subject.",
+      "image": "/images/composition--negative-space-480.webp"
+    },
+    "Panoramic": {
+      "description": "Very wide framing capturing a sweeping horizontal expanse.",
+      "image": "/images/composition--panoramic-480.webp"
+    },
+    "Minimalist Composition": {
+      "description": "Extremely sparse framing with few elements and lots of space.",
+      "image": "/images/composition--minimalist-composition-480.webp"
+    },
+    "Maximalist Composition": {
+      "description": "Densely packed frame overflowing with detail and objects.",
+      "image": "/images/composition--maximalist-composition-480.webp"
+    }
+  },
+  "Lighting": {
+    "Golden Hour": {
+      "description": "Warm, soft sunlight shortly after sunrise or before sunset.",
+      "image": "/images/lighting--golden-hour-480.webp"
+    },
+    "Neon Lighting": {
+      "description": "Glowing colored light, often pink/cyan, with a cyberpunk feel.",
+      "image": "/images/lighting--neon-lighting-480.webp"
+    },
+    "Chiaroscuro": {
+      "description": "Strong contrast between light and dark for dramatic depth, like Caravaggio.",
+      "image": "/images/lighting--chiaroscuro-480.webp"
+    },
+    "Backlit": {
+      "description": "Subject lit from behind, creating a glowing rim and silhouetted front.",
+      "image": "/images/lighting--backlit-480.webp"
+    },
+    "Soft Diffused": {
+      "description": "Even, gentle light with no harsh shadows, like an overcast day.",
+      "image": "/images/reference-fox-480.webp"
+    },
+    "Volumetric": {
+      "description": "Visible rays of light through fog or dust (god rays).",
+      "image": "/images/lighting--volumetric-480.webp"
+    },
+    "Bioluminescent": {
+      "description": "Organic glowing light emitted by the subject itself.",
+      "image": "/images/lighting--bioluminescent-480.webp"
+    },
+    "Studio Lighting": {
+      "description": "Controlled, professional three-point lighting with clean shadows.",
+      "image": "/images/lighting--studio-lighting-480.webp"
+    },
+    "Candlelit": {
+      "description": "Warm, flickering light with deep surrounding shadows.",
+      "image": "/images/lighting--candlelit-480.webp"
+    },
+    "Moonlit": {
+      "description": "Cool, pale blue-white night lighting.",
+      "image": "/images/lighting--moonlit-480.webp"
+    },
+    "Blue Hour": {
+      "description": "Deep blue ambient light just before sunrise or after sunset.",
+      "image": "/images/lighting--blue-hour-480.webp"
+    },
+    "Dappled Light": {
+      "description": "Patches of light broken up by foliage or objects, creating spotted shadow patterns.",
+      "image": "/images/lighting--dappled-light-480.webp"
+    }
+  },
+  "Mood & Atmosphere": {
+    "Dreamy": {
+      "description": "Soft, hazy, and ethereal with a gentle idealized feel.",
+      "image": "/images/mood-atmosphere--dreamy-480.webp"
+    },
+    "Eerie": {
+      "description": "Unsettling and mysterious, on the edge of unsettling.",
+      "image": "/images/mood-atmosphere--eerie-480.webp"
+    },
+    "Whimsical": {
+      "description": "Playful, fanciful, and charmingly imaginative.",
+      "image": "/images/mood-atmosphere--whimsical-480.webp"
+    },
+    "Melancholic": {
+      "description": "Quietly sad and reflective, often with muted tones.",
+      "image": "/images/mood-atmosphere--melancholic-480.webp"
+    },
+    "Serene": {
+      "description": "Calm, peaceful, and tranquil.",
+      "image": "/images/mood-atmosphere--serene-480.webp"
+    },
+    "Apocalyptic": {
+      "description": "Ruined, desolate world after catastrophe.",
+      "image": "/images/mood-atmosphere--apocalyptic-480.webp"
+    },
+    "Utopian": {
+      "description": "Idealized, perfect world — clean, bright, harmonious.",
+      "image": "/images/mood-atmosphere--utopian-480.webp"
+    },
+    "Nostalgic": {
+      "description": "Warm memory-evoking feel, often with vintage color grading.",
+      "image": "/images/mood-atmosphere--nostalgic-480.webp"
+    },
+    "Surreal": {
+      "description": "Illogical, dreamlike juxtapositions in the style of Dal&iacute; or Magritte.",
+      "image": "/images/mood-atmosphere--surreal-480.webp"
+    },
+    "Ominous": {
+      "description": "Threatening and foreboding atmosphere.",
+      "image": "/images/mood-atmosphere--ominous-480.webp"
+    },
+    "Epic": {
+      "description": "Monumental, awe-inspiring scale that dwarfs the viewer.",
+      "image": "/images/mood-atmosphere--epic-480.webp"
+    },
+    "Cozy": {
+      "description": "Warm, intimate, and inviting — soft textures and a sense of home.",
+      "image": "/images/mood-atmosphere--cozy-480.webp"
+    }
+  },
+  "Color Palette": {
+    "Monochrome": {
+      "description": "Single-hue composition, often grayscale.",
+      "image": "/images/color-palette--monochrome-480.webp"
+    },
+    "Pastel": {
+      "description": "Soft, pale, desaturated colors with a gentle feel.",
+      "image": "/images/color-palette--pastel-480.webp"
+    },
+    "Vaporwave": {
+      "description": "Neon pinks, purples, and cyans with retro 80s/90s nostalgia.",
+      "image": "/images/color-palette--vaporwave-480.webp"
+    },
+    "Earthy Tones": {
+      "description": "Warm browns, greens, and ochres inspired by nature.",
+      "image": "/images/color-palette--earthy-tones-480.webp"
+    },
+    "Duotone": {
+      "description": "Image rendered in only two contrasting colors.",
+      "image": "/images/color-palette--duotone-480.webp"
+    },
+    "Neon Palette": {
+      "description": "Saturated electric colors against dark backgrounds.",
+      "image": "/images/color-palette--neon-palette-480.webp"
+    },
+    "Sepia": {
+      "description": "Warm brown-tinted tones like an aged photograph.",
+      "image": "/images/color-palette--sepia-480.webp"
+    },
+    "Complementary": {
+      "description": "Colors opposite each other on the color wheel (e.g. teal & orange) for strong contrast.",
+      "image": "/images/color-palette--complementary-480.webp"
+    },
+    "Analogous": {
+      "description": "Neighboring hues on the color wheel for harmonious blending.",
+      "image": "/images/color-palette--analogous-480.webp"
+    },
+    "High Saturation": {
+      "description": "Intensely vivid, punchy colors.",
+      "image": "/images/color-palette--high-saturation-480.webp"
+    },
+    "Limited Palette": {
+      "description": "Constrained to a small fixed set of colors (8–32), like classic game sprites — flat color bands instead of smooth blends.",
+      "image": "/images/color-palette--limited-palette-480.webp"
+    },
+    "Jewel Tones": {
+      "description": "Deep, richly saturated hues — emerald, oxblood, sapphire, and antique gold.",
+      "image": "/images/color-palette--jewel-tones-480.webp"
+    },
+    "Muted Palette": {
+      "description": "Desaturated, grey-undertoned colors with a subdued, quiet mood — washed-out rather than pale.",
+      "image": "/images/color-palette--muted-palette-480.webp"
+    }
+  },
+  "Era & Setting": {
+    "Cyberpunk": {
+      "description": "High-tech dystopia with neon, rain, and sprawling megacities.",
+      "image": "/images/era-setting--cyberpunk-480.webp"
+    },
+    "Steampunk": {
+      "description": "Victorian-era technology powered by steam, brass, and gears.",
+      "image": "/images/era-setting--steampunk-480.webp"
+    },
+    "Retro Futurism": {
+      "description": "The future as imagined in the 1950s-70s — chrome, fins, atomic motifs.",
+      "image": "/images/era-setting--retro-futurism-480.webp"
+    },
+    "Medieval": {
+      "description": "Castles, knights, and rustic villages of the Middle Ages.",
+      "image": "/images/era-setting--medieval-480.webp"
+    },
+    "Art Deco": {
+      "description": "1920s glamour with geometric patterns, gold, and symmetry.",
+      "image": "/images/era-setting--art-deco-480.webp"
+    },
+    "Solarpunk": {
+      "description": "Optimistic green future with lush vegetation and sustainable tech.",
+      "image": "/images/era-setting--solarpunk-480.webp"
+    },
+    "Dieselpunk": {
+      "description": "Gritty interwar-era tech aesthetic with heavy machinery.",
+      "image": "/images/era-setting--dieselpunk-480.webp"
+    },
+    "Baroque": {
+      "description": "Ornate 17th-century opulence with dramatic movement and gold detail.",
+      "image": "/images/era-setting--baroque-480.webp"
+    },
+    "Ancient": {
+      "description": "Classical Greco-Roman world of marble temples, ruins, and mythology.",
+      "image": "/images/era-setting--ancient-480.webp"
+    },
+    "Prehistoric": {
+      "description": "Primordial world of caves, volcanoes, and colossal ancient life.",
+      "image": "/images/era-setting--prehistoric-480.webp"
+    },
+    "Feudal Japan": {
+      "description": "Edo-era setting with torii gates, castles, and samurai aesthetics.",
+      "image": "/images/era-setting--feudal-japan-480.webp"
+    },
+    "Wild West": {
+      "description": "Dusty frontier towns, saloons, and endless desert landscapes.",
+      "image": "/images/era-setting--wild-west-480.webp"
+    },
+    "Victorian Gothic": {
+      "description": "Dark 19th-century world of gothic spires, fog, and gaslight — no steam, just gloom.",
+      "image": "/images/era-setting--victorian-gothic-480.webp"
+    },
+    "Underwater": {
+      "description": "Submerged world with coral, caustic light, drifting particles, and distorted sound.",
+      "image": "/images/era-setting--underwater-480.webp"
+    },
+    "Dark Fantasy": {
+      "description": "Grim medieval fantasy of monsters, ruins, and shadowed forests — brooding and dangerous.",
+      "image": "/images/era-setting--dark-fantasy-480.webp"
+    },
+    "Celtic": {
+      "description": "Ancient-to-medieval Celtic world — knotwork, La Tène spirals, illuminated manuscript ornament, standing stones, and round towers.",
+      "image": "/images/era-setting--celtic-480.webp"
+    },
+    "Post-Soviet": {
+      "description": "Post-Soviet urban landscape — concrete panel-block housing, trolleybus wires, worn courtyards, and brutalist remnants.",
+      "image": "/images/era-setting--post-soviet-480.webp"
+    }
+  },
+  "Texture & Detail Effects": {
+    "Gritty": {
+      "description": "Rough, dirty, realistic texture with grime and wear.",
+      "image": "/images/texture-detail-effects--gritty-480.webp"
+    },
+    "Weathered": {
+      "description": "Aged by exposure — faded, cracked, and worn.",
+      "image": "/images/texture-detail-effects--weathered-480.webp"
+    },
+    "Glitchy": {
+      "description": "Digital corruption artifacts — color fringing, scanlines, datamosh.",
+      "image": "/images/texture-detail-effects--glitchy-480.webp"
+    },
+    "Bokeh": {
+      "description": "Soft blurred background points of light from shallow depth of field.",
+      "image": "/images/texture-detail-effects--bokeh-480.webp"
+    },
+    "Vignette": {
+      "description": "Darkened edges drawing focus to the center.",
+      "image": "/images/texture-detail-effects--vignette-480.webp"
+    },
+    "Film Grain": {
+      "description": "Analog camera noise giving a textured, cinematic feel.",
+      "image": "/images/texture-detail-effects--film-grain-480.webp"
+    },
+    "Motion Blur": {
+      "description": "Streaking along the direction of movement to imply speed.",
+      "image": "/images/texture-detail-effects--motion-blur-480.webp"
+    },
+    "Lens Flare": {
+      "description": "Bright light scattering rings and streaks across the frame.",
+      "image": "/images/texture-detail-effects--lens-flare-480.webp"
+    },
+    "Double Exposure": {
+      "description": "Two images blended into one, like overlapping film photos.",
+      "image": "/images/texture-detail-effects--double-exposure-480.webp"
+    },
+    "Dithering": {
+      "description": "Gradients built from visible dot patterns (ordered/Bayer dithering) instead of smooth blends — classic limited-palette pixel art shading.",
+      "image": "/images/texture-detail-effects--dithering-480.webp"
+    },
+    "CRT": {
+      "description": "Faint CRT scanlines and phosphor glow over the whole image, like playing on an old tube TV.",
+      "image": "/images/texture-detail-effects--crt-480.webp"
+    },
+    "Aqua Glass": {
+      "description": "Translucent blue-tinted glass with rounded highlights, refraction, and a wet polished sheen — 2000s aqua UI button look.",
+      "image": "/images/texture-detail-effects--aqua-glass-480.webp"
+    },
+    "Bilinear Blur": {
+      "description": "Whole frame softened as if tiny textures were bilinear-filtered — the misty blur of a 320×240 console render.",
+      "image": "/images/texture-detail-effects--bilinear-blur-480.webp"
+    },
+    "Low-Res Textures": {
+      "description": "Chunky, visibly low-resolution textures stretched over geometry, with obvious tiling — scarce texture memory of a 90s console.",
+      "image": "/images/texture-detail-effects--low-res-textures-480.webp"
+    },
+    "Crosshatching": {
+      "description": "Form and shadow built from dense layers of fine parallel pen lines, like an engraved book illustration.",
+      "image": "/images/texture-detail-effects--crosshatching-480.webp"
+    },
+    "Pixelated": {
+      "description": "Image broken into visible chunky pixels, like a low-resolution capture enlarged.",
+      "image": "/images/texture-detail-effects--pixelated-480.webp"
+    },
+    "Glow": {
+      "description": "Bright light sources bleeding soft halos into their surroundings, like overexposed bloom.",
+      "image": "/images/texture-detail-effects--glow-480.webp"
+    },
+    "Depth Fog": {
+      "description": "Background receding into thick atmospheric mist, layers dissolving with distance while the foreground stays sharp.",
+      "image": "/images/texture-detail-effects--depth-fog-480.webp"
+    },
+    "Depth of Field": {
+      "description": "Subject sharp while the background melts into soft focus blur, like a wide-aperture camera lens.",
+      "image": "/images/texture-detail-effects--depth-of-field-480.webp"
+    }
+  },
+  "Background & Environment": {
+    "Forest": {
+      "description": "Dense woodland backdrop with thick trunks and layered foliage.",
+      "image": "/images/background-environment--forest-480.webp"
+    },
+    "City Skyline": {
+      "description": "Urban backdrop of towers, rooftops, and glowing windows.",
+      "image": "/images/background-environment--city-skyline-480.webp"
+    },
+    "Cosmic": {
+      "description": "Deep space backdrop with stars, nebulae, and distant galaxies.",
+      "image": "/images/background-environment--cosmic-480.webp"
+    },
+    "Ocean": {
+      "description": "Open sea backdrop with waves stretching to the horizon.",
+      "image": "/images/background-environment--ocean-480.webp"
+    },
+    "Mountains": {
+      "description": "Towering peaks and ridges receding into atmospheric haze.",
+      "image": "/images/background-environment--mountains-480.webp"
+    },
+    "Desert": {
+      "description": "Endless sand dunes under a vast empty sky.",
+      "image": "/images/background-environment--desert-480.webp"
+    },
+    "Clouds": {
+      "description": "Subject floating among soft billowing clouds.",
+      "image": "/images/background-environment--clouds-480.webp"
+    },
+    "Garden": {
+      "description": "Lush flowerbeds, hedges, and winding paths.",
+      "image": "/images/background-environment--garden-480.webp"
+    },
+    "Industrial": {
+      "description": "Factories, pipes, concrete, and heavy machinery.",
+      "image": "/images/background-environment--industrial-480.webp"
+    },
+    "Starry Night": {
+      "description": "Dark backdrop scattered with bright stars and galactic band.",
+      "image": "/images/background-environment--starry-night-480.webp"
+    },
+    "White": {
+      "description": "Plain white studio background — clean product-shot isolation.",
+      "image": "/images/background-environment--white-480.webp"
+    },
+    "Black": {
+      "description": "Solid black background for dramatic subject isolation.",
+      "image": "/images/background-environment--black-480.webp"
+    },
+    "Gradient": {
+      "description": "Smooth color-fade background, from soft pastels to deep vignettes.",
+      "image": "/images/background-environment--gradient-480.webp"
+    },
+    "Transparent": {
+      "description": "Subject isolated with no background at all, like a cut-out asset (PNG-style).",
+      "image": "/images/reference-fox-480.webp"
+    }
+  }
 }

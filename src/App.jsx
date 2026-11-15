@@ -1,4 +1,3 @@
-import React from 'react'
 import PromptGenerator from './components/PromptGenerator'
 import './styles.css'
 
